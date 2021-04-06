@@ -2,7 +2,13 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// This part should be reomved using some Backend Server
+// Get the api key based on user login - Rest call 
+var apiKey = "d9ecce0ecc057d013aa9a16261b005dabe7d6ae94f857937c50c892b65b43e23";
+
 export const environment = {
+  webSocketUrl: 'wss://streamer.cryptocompare.com/v2?api_key=' + apiKey,
+  reconnectInterval: '',
   production: false
 };
 

@@ -1,0 +1,17 @@
+<div>
+  <div class="mainGrid">
+    <span class="currencyLabel">Select currency</span>
+    <select (change)="onCurrencyChange($event)">
+      <option *ngFor="let currency of currencyList">{{currency}}</option>
+    </select>
+    <ag-grid-angular
+      style="width: auto; height: 500px;"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      (gridReady)="onGridReady($event)"
+      [getRowNodeId]="getRowNodeId"
+    >
+    </ag-grid-angular>
+  </div>
+</div>
